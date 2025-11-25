@@ -1,0 +1,20 @@
+node_modules/
+.next/
+.turbo/
+.pnpm-store/
+.vscode/
+*.log
+
+# Env files
+.env
+.env.*
+!.env.local
+
+# Java build
+backend/target/
+backend/.idea/
+backend/*.iml
+
+# Tools
+vehiculo/
+
