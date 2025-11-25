@@ -13,6 +13,7 @@ public class ParkingRecord {
   private String reservationId;
   private String parkingSpotId;
   private String vehiclePlate;
+  private String vehicleType;
   private OffsetDateTime entryTime = OffsetDateTime.now();
   private OffsetDateTime exitTime;
   private BigDecimal calculatedAmount;
@@ -27,6 +28,8 @@ public class ParkingRecord {
   public void setParkingSpotId(String parkingSpotId) { this.parkingSpotId = parkingSpotId; }
   public String getVehiclePlate() { return vehiclePlate; }
   public void setVehiclePlate(String vehiclePlate) { this.vehiclePlate = vehiclePlate; }
+  public String getVehicleType() { return vehicleType; }
+  public void setVehicleType(String vehicleType) { this.vehicleType = vehicleType; }
   public OffsetDateTime getEntryTime() { return entryTime; }
   public void setEntryTime(OffsetDateTime entryTime) { this.entryTime = entryTime; }
   public OffsetDateTime getExitTime() { return exitTime; }

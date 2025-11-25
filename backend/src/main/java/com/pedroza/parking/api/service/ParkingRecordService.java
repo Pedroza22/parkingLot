@@ -43,6 +43,7 @@ public class ParkingRecordService {
     ParkingRecord record = new ParkingRecord();
     record.setParkingSpotId(spot.getId());
     record.setVehiclePlate(req.vehiclePlate.toUpperCase());
+    record.setVehicleType(req.vehicleType);
     record.setEntryTime(OffsetDateTime.now());
     record.setRegisteredBy(req.registeredBy);
     ParkingRecord saved = recordRepo.save(record);
@@ -85,7 +86,7 @@ public class ParkingRecordService {
       ActiveRecordResponse dto = new ActiveRecordResponse();
       dto.id = r.getId();
       dto.vehicle_plate = r.getVehiclePlate();
-      dto.vehicle_type = "unknown";
+      dto.vehicle_type = r.getVehicleType() != null ? r.getVehicleType() : "unknown";
       dto.entry_time = r.getEntryTime().toString();
       dto.parking_spot_id = r.getParkingSpotId();
       dto.spot_number = spot != null ? spot.getSpotNumber() : null;
