@@ -10,8 +10,11 @@ import org.springframework.web.bind.annotation.RestController;
 import com.pedroza.parking.api.domain.ParkingSpot;
 import com.pedroza.parking.api.repository.ParkingSpotRepository;
 
+import io.swagger.v3.oas.annotations.tags.Tag;
+
 @RestController
 @RequestMapping("/api/parking-spots")
+@Tag(name = "Parking Spots")
 public class ParkingSpotController {
   private final ParkingSpotRepository spotRepo;
   public ParkingSpotController(ParkingSpotRepository spotRepo) { this.spotRepo = spotRepo; }

@@ -15,9 +15,11 @@ import com.pedroza.parking.api.dto.CreateReservationRequest;
 import com.pedroza.parking.api.exception.NotFoundException;
 import com.pedroza.parking.api.service.ParkingLotService;
 import com.pedroza.parking.api.service.ReservationService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 
 @RestController
 @RequestMapping("/api/reservations")
+@Tag(name = "Reservations")
 public class ReservationController {
   private final ReservationService reservationService;
   private final ParkingLotService lotService;

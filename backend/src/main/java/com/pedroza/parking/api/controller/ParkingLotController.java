@@ -13,9 +13,11 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import java.util.*;
 import java.util.stream.Collectors;
+import io.swagger.v3.oas.annotations.tags.Tag;
 
 @RestController
 @RequestMapping("/api/parking-lots")
+@Tag(name = "Parking Lots")
 public class ParkingLotController {
   private final ParkingLotService lotService;
   private final ParkingSpotRepository spotRepo;

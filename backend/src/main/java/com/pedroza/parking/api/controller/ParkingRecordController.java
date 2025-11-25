@@ -15,9 +15,11 @@ import com.pedroza.parking.api.dto.CheckoutRequest;
 import com.pedroza.parking.api.dto.VehicleEntryRequest;
 import com.pedroza.parking.api.service.ParkingLotService;
 import com.pedroza.parking.api.service.ParkingRecordService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 
 @RestController
 @RequestMapping("/api/parking-records")
+@Tag(name = "Parking Records")
 public class ParkingRecordController {
   private final ParkingRecordService recordService;
   private final ParkingLotService lotService;
