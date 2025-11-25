@@ -1,0 +1,13 @@
+server:
+  port: 8081
+spring:
+  data:
+    mongodb:
+      uri: ${MONGODB_URI}
+  mvc:
+    cors:
+      mappings:
+        - path: /api/**
+          allowed-origins: http://localhost:3000
+          allowed-methods: GET,POST,PUT,PATCH,DELETE,OPTIONS
+          allowed-headers: "*"
