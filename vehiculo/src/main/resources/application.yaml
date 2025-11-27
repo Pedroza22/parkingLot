@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: vehiculo
+  data:
+    mongodb:
+      uri: ${MONGODB_URI:mongodb://localhost:27017/vehiculos_db}
+      auto-index-creation: true
+server:
+  port: ${SERVER_PORT:8080}
